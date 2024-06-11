@@ -16,7 +16,7 @@ interface PostTableProps {
   title?: string;
 }
 
-const PostTable = ({ limit, title }: PostTableProps) => {
+const PostsTable = ({ limit, title }: PostTableProps) => {
   //sort post in desc order based on date
   const sortedPosts: Post[] = [...posts].sort(
     (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
@@ -64,4 +64,4 @@ const PostTable = ({ limit, title }: PostTableProps) => {
   );
 };
 
-export default PostTable;
+export default PostsTable;
